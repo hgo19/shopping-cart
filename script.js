@@ -42,7 +42,7 @@ const counter = () => {
 const createProductImageElement = (imageSource) => {
   const img = document.createElement('img');
   img.className = 'item__image';
-  const imgHD = imageSource.replace(/I.jpg/g, 'W.jpg'); // Dica aluno Wayne para imagem ficar HD
+  const imgHD = imageSource.replace(/I.jpg/g, 'W.jpg');
   img.src = imgHD;
   return img;
 };
