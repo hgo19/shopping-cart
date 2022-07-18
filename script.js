@@ -30,13 +30,16 @@ const newItem = () => {
 }
 
 const counter = () => {
-  contador.style.cssText = 'background-color: rgb(142, 200, 255);'
-    + 'border-radius: 10%;'
+  if (cart.childNodes.length > 0) {
+    contador.style.cssText = 'background-color: rgb(142, 200, 255);'
+    + 'border-radius: 30%;'
     + 'color: white;'
     + 'font-weight: 700;'
-    + 'padding: 5px;'
-    + 'text-align: center;';
+    + 'padding: 3px 3px 0 3px;'
   contador.innerHTML = cart.childNodes.length;
+  } else {
+    contador.style.display = 'none';
+  }
 }
 
 const createProductImageElement = (imageSource) => {
@@ -234,6 +237,7 @@ const callAsync = async () => {
   itemButton();
   checkContent();
   removeItem();
+  counter();
 };
 
 window.onload = () => {
